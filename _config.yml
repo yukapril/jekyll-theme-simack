@@ -15,7 +15,7 @@ highlighter: rouge
 # 根目录设置
 # 如果是根目录, 不要填写'/', 直接留空就行
 # 如果是非根目录访问, 如http://abc.com/blog, 此处填写'/blog'
-baseurl: /
+baseurl:
 
 # 分页设置
 paginate: 10
