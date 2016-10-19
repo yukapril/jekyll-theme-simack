@@ -316,6 +316,17 @@ a:hover {
 }
 
 /* article */
+.g-article a,
+.g-article a:visited,
+.g-article a:active {
+    color: #c00;
+}
+
+.g-article a:hover {
+    color: #c00;
+}
+
+
 .g-article .title {
     font-size: 1.6rem;
     font-weight: normal;
