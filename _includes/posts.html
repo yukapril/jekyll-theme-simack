@@ -1,0 +1,59 @@
+<section class="g-posts">
+    {% for post in paginator.posts %}
+    <article class="post-item">
+        <h2 class="post-title f-tac">
+            <a class="f-links-x black" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                {{ post.title }}
+            </a>
+        </h2>
+        <h3 class="post-source f-tac">
+            <span class="iconfont icon-time"></span>
+            <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: '%F' }}</time>
+            {% if post.categories.size > 0 %}
+            &nbsp;<span class="iconfont icon-fenlei"></span>
+            <div class="cat f-dib">
+                {% for cat in post.categories %}
+                <span>{{cat}}</span>
+                {% endfor %}
+            </div>
+            {% endif%}
+            {% if post.tags.size > 0 %}
+            &nbsp;<span class="iconfont icon-tag"></span>
+            <div class="tags f-dib">
+                {% for tag in post.tags %}
+                <span>{{tag}}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </h3>
+        <div>{{ post.excerpt | excerpt_separator:"" }}</div>
+        <div class="post-read f-tac">
+            <a class="btn" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">阅读全文<span
+                    class="iconfont icon-arrowright"></span></a>
+        </div>
+    </article>
+    {% endfor %}
+
+    {% if paginator.total_pages > 1 %}
+    <div class="f-tac">
+        <div class="pagination">
+            {% if paginator.previous_page %}
+            <a class="f-dib side"
+               href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <span class="iconfont icon-arrowleft"></span>
+            </a>
+            {% else %}
+            <span class="f-dib side"><span class="iconfont icon-arrowleft"></span></span>
+            {% endif %}
+            <span class="f-dib mid">{{paginator.page}} OF {{paginator.total_pages}}</span>
+            {% if paginator.next_page %}
+            <a class="f-dib side" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <span class="iconfont icon-arrowright"></span>
+            </a>
+            {% else %}
+            <span class="f-dib side"><span class="iconfont icon-arrowright"></span></span>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</section>

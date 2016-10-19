@@ -1,0 +1,361 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, textarea, select, input {
+    font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+    font-size: 16px;
+    color: #333;
+}
+
+fieldset, img, html, body, iframe {
+    border: 0;
+}
+
+li {
+    list-style: none
+}
+
+em, strong {
+    font-weight: bold;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* fonts */
+@font-face {
+    font-family: "iconfont";
+    src: url('../font/iconfont.eot?t=1476458098'); /* IE9*/
+    src: url('../font/iconfont.eot?t=1476458098#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff?t=1476458098') format('woff'), /* chrome, firefox */ url('../font/iconfont.ttf?t=1476458098') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg?t=1476458098#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-time:before {
+    content: "\e61a";
+}
+
+.icon-fenlei:before {
+    content: "\e891";
+}
+
+.icon-tag:before {
+    content: "\e752";
+}
+
+.icon-arrowleft:before {
+    content: "\e602";
+}
+
+.icon-arrowright:before {
+    content: "\e603";
+}
+
+.icon-github:before {
+    content: "\e735";
+}
+
+.icon-weibo:before {
+    content: "\f002c";
+}
+
+/* commons */
+html, body, .g-body {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.f-cf:before, .f-cf:after {
+    content: "";
+    display: table;
+}
+
+.f-cf:after {
+    clear: both;
+}
+
+.f-cf {
+    zoom: 1;
+}
+
+.f-dib {
+    display: inline-block;
+}
+
+.f-tac {
+    text-align: center;
+}
+
+.f-links-x,
+.f-links-y {
+    position: relative;
+}
+
+.f-links-x:after,
+.f-links-y:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.f-links-x:after {
+    left: 0;
+    width: 100%;
+    height: 2px;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+}
+
+.f-links-x:hover:after {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.f-links-y:after {
+    left: -6px;
+    width: 2px;
+    height: 100%;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+.f-links-y:hover:after {
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.f-links-x.black:after {
+    background: #333;
+}
+
+a,
+a:visited,
+a:active {
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 2px 6px;
+    border: 2px solid #333;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #fff;
+    color: #333;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* sidebar */
+.g-sidebar {
+    position: relative;
+    float: left;
+    margin: 0 -340px -20000px 0;
+    padding: 0 40px 20000px;
+    width: 260px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    overflow: hidden;
+}
+
+.g-sidebar a,
+.g-sidebar a:hover,
+.g-sidebar a:visited {
+    color: #fff;
+}
+
+.g-sidebar a.dark,
+.g-sidebar a.dark:visited {
+    color: #bbb;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.g-sidebar a.dark:hover {
+    color: #fff;
+}
+
+.g-sidebar .title {
+    padding: 3rem 0 1rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+}
+
+.g-sidebar .desc {
+    padding-bottom: 2rem;
+}
+
+.g-sidebar .links {
+    margin-bottom: 2rem;
+}
+
+.g-sidebar .links .name span {
+    border-bottom: 2px solid #fff;
+    font-size: 1.2rem;
+}
+
+.g-sidebar .list {
+    margin-left: 6px;
+}
+
+.g-sidebar .copyright {
+    margin-top: 2rem;
+    border-top: 2px solid #fff;
+    font-size: 0.8rem;
+}
+
+/* main */
+.g-main {
+    margin-left: 340px;
+    padding: 2rem 60px;
+    width: 620px;
+    overflow: hidden;
+}
+
+/* post list */
+.g-posts .post-title a,
+.g-posts .post-title a:visited,
+.g-posts .post-title a:active {
+    color: #333;
+}
+
+.g-posts .post-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid #333;
+}
+
+.g-posts .post-item:last-of-type {
+    border-bottom: 0;
+}
+
+.g-posts .post-title {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.g-posts .post-source {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #999;
+}
+
+.g-posts .post-read {
+    margin-top: 2rem;
+}
+
+.g-posts .pagination {
+    display: inline-block;
+    margin: 0 auto;
+    border: 2px solid #aaa;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 3px;
+}
+
+.g-posts .pagination .mid,
+.g-posts .pagination span.side,
+.g-posts .pagination a.side {
+    padding: 4px 10px;
+}
+
+.g-posts .pagination .mid {
+    margin: 2px 0;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+}
+
+.g-posts .pagination span.side {
+    color: #999;
+}
+
+.g-posts .pagination a.side {
+    color: #333;
+}
+
+/* article */
+.g-article .title {
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 3.6rem;
+}
+
+.g-article .source {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #999;
+}
+
+.g-article .content {
+    margin-top: 2rem;
+}
+
+/* comments */
+.g-comments {
+    margin-top: 2rem;
+}
+
+/* about */
+.g-about hr {
+    margin: 1rem 0;
+}
+
+.g-about .links {
+}
+
+.g-about .links .item,
+.g-about .links .item:visited,
+.g-about .links .item:active {
+    float: left;
+    margin: 2px 10px;
+    width: 100px;
+    color: #999;
+}
+
+.g-about .links .item:hover {
+    color: #333;
+    font-weight: bold;
+}
+

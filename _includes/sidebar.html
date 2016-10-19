@@ -1,0 +1,43 @@
+<div class="g-sidebar">
+    <div class="title">
+        <a class="f-links-x" href="{{site.baseurl}}/">{{site.title}}</a>
+    </div>
+    <div class="desc">
+        <p>{{site.description}}</p>
+    </div>
+    <div class="links">
+        <p class="name"><span>NAVS</span></p>
+        <ul class="list">
+            {% for link in site.navLinks %}
+            <li><a class="dark f-links-y" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="links">
+        <p class="name"><span>CATEGORIES</span></p>
+        <ul class="list">
+            {% for cat in site.categoryLinks %}
+            <li><a class="dark f-links-y" href="{{site.baseurl}}{{cat.url}}">{{cat.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="links">
+        <p class="name"><span>LINKS</span></p>
+        <ul class="list">
+            {% for link in site.otherLinks %}
+            <li><a class="dark f-links-y" href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="copyright">
+        <ul>
+            <li>&copy;2016&nbsp;<a href="#">{{site.title}}</a></li>
+            <li>Powered by <a href="http://jekyllrb.com">Jekyll</a>.&nbsp;
+                Theme by <a href="http://yukapril.com">yukaPriL</a>.
+            </li>
+        </ul>
+    </div>
+</div>
