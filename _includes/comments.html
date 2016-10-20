@@ -1,10 +1,11 @@
 {% if site.duoshuo.status == true %}
-
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{page.url}}"></div>
+<div class="ds-thread" data-thread-key="{{page.date | date:"%F%T" | remove:'-' | remove:':' }}" data-title="{{page.title}}" data-url="{{page.url}}"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
+	var duoshuoQueryUrl = document.querySelector('.ds-thread').dataset.url;
+	document.querySelector('.ds-thread').dataset.url = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '') + duoshuoQueryUrl;
     var duoshuoQuery = {short_name: "{{site.duoshuo.name}}"};
     (function () {
         var ds = document.createElement('script');

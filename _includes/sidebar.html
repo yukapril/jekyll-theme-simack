@@ -27,7 +27,7 @@
         <p class="name"><span>LINKS</span></p>
         <ul class="list">
             {% for link in site.otherLinks %}
-            <li><a class="dark f-links-y" href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+            <li><a class="dark f-links-y" href="{{link.url}}" target="_blank" rel="nofollow">{{link.title}}</a></li>
             {% endfor %}
         </ul>
     </div>
@@ -35,8 +35,8 @@
     <div class="copyright">
         <ul>
             <li>&copy;2016&nbsp;<a href="#">{{site.title}}</a></li>
-            <li>Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>.&nbsp;
-                Theme by <a href="https://github.com/yukapril/jekyll-theme-simack" target="_blank">simack</a>.
+            <li>Powered by <a href="http://jekyllrb.com" target="_blank" rel="nofollow">Jekyll</a>.&nbsp;
+                Theme by <a href="https://github.com/yukapril/jekyll-theme-simack" target="_blank" rel="nofollow">simack</a>.
             </li>
         </ul>
     </div>
