@@ -28,8 +28,8 @@ paginate_path: "page:num"
 # 标题: 在左侧顶栏显示, 以及底部版权位置显示
 title: 我的博客
 
-# 描述: 在左侧顶栏标题下显示, 同时作为页面meta标签内使用(SEO)
-description: 这是一个基于jekyll的博客
+# 兴趣爱好描述: 在左侧顶栏标题下显示, 同时作为页面meta标签内使用(SEO)
+bio: 这是一个基于jekyll的博客
 
 # 关键词 仅作用于页面meta标签使用(SEO)
 keywords: jekyll,simack,博客
@@ -39,7 +39,7 @@ keywords: jekyll,simack,博客
 # ====sidebar links 侧边栏链接====
 # 站内导航
 # 需要使用'/'开头
-navLinks:
+menusLinks:
   - title: 首页
     url: /
   - title: 关于
@@ -53,8 +53,8 @@ categoryLinks:
   - title: 学习
     url: /categories/study.html
 
-# 其他链接(此链接在新窗口打开)
-otherLinks:
+# 友情链接(此链接在新窗口打开)
+friendLinks:
   - title: simack
     url: https://github.com/yukapril/jekyll-theme-simack
 

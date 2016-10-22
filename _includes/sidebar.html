@@ -2,13 +2,13 @@
     <div class="title">
         <a class="f-links-x" href="{{site.baseurl}}/">{{site.title}}</a>
     </div>
-    <div class="desc">
-        <p>{{site.description}}</p>
+    <div class="bio">
+        <p>{{site.bio}}</p>
     </div>
     <div class="links">
-        <p class="name"><span>NAVS</span></p>
+        <p class="name"><span>MENUS</span></p>
         <ul class="list">
-            {% for link in site.navLinks %}
+            {% for link in site.menusLinks %}
             <li><a class="dark f-links-y" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a></li>
             {% endfor %}
         </ul>
@@ -26,7 +26,7 @@
     <div class="links">
         <p class="name"><span>LINKS</span></p>
         <ul class="list">
-            {% for link in site.otherLinks %}
+            {% for link in site.friendLinks %}
             <li><a class="dark f-links-y" href="{{link.url}}" target="_blank" rel="nofollow">{{link.title}}</a></li>
             {% endfor %}
         </ul>

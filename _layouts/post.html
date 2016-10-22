@@ -10,20 +10,22 @@
             <h3 class="source f-tac">
                 <span class="iconfont icon-time"></span>
                 <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date: '%F' }}</time>
-                &nbsp;
-                <span class="iconfont icon-fenlei"></span>
+                {% if page.categories.size > 0 %}
+                &nbsp;<span class="iconfont icon-fenlei"></span>
                 <div class="cat f-dib">
                     {% for cat in page.categories %}
                     <span>{{cat}}</span>
                     {% endfor %}
                 </div>
-                &nbsp;
-                <span class="iconfont icon-tag"></span>
+                {% endif%}
+                {% if page.tags.size > 0 %}
+                &nbsp;<span class="iconfont icon-tag"></span>
                 <div class="tags f-dib">
                     {% for tag in page.tags %}
                     <span>{{tag}}</span>
                     {% endfor %}
                 </div>
+                {% endif %}
             </h3>
             <div class="content markdown-body">{{page.content}}</div>
         </article>
