@@ -5,32 +5,32 @@
     <div class="bio">
         <p>{{site.bio}}</p>
     </div>
-    <div class="links">
-        <p class="name"><span>MENUS</span></p>
-        <ul class="list">
-            {% for link in site.menusLinks %}
-            <li><a class="dark f-links-y" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div class="links">
-        <p class="name"><span>CATEGORIES</span></p>
-        <ul class="list">
-            {% for cat in site.categoryLinks %}
-            <li><a class="dark f-links-y" href="{{site.baseurl}}{{cat.url}}">{{cat.title}}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div class="links">
-        <p class="name"><span>LINKS</span></p>
-        <ul class="list">
-            {% for link in site.friendLinks %}
-            <li><a class="dark f-links-y" href="{{link.url}}" target="_blank" rel="nofollow">{{link.title}}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+    <ul class="nav">
+        <li class="links">
+            <p class="name"><span>MENUS</span></p>
+            <ul class="list">
+                {% for link in site.menusLinks %}
+                <li><a class="dark f-links-y" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="links">
+            <p class="name"><span>CATEGORIES</span></p>
+            <ul class="list">
+                {% for cat in site.categoryLinks %}
+                <li><a class="dark f-links-y" href="{{site.baseurl}}{{cat.url}}">{{cat.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="links">
+            <p class="name"><span>LINKS</span></p>
+            <ul class="list">
+                {% for link in site.friendLinks %}
+                <li><a class="dark f-links-y" href="{{link.url}}" target="_blank" rel="nofollow">{{link.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
 
     <div class="copyright">
         <ul>

@@ -182,6 +182,27 @@ a:hover {
     color: #fff;
 }
 
+/* header */
+.g-header {
+    display: none;
+    margin: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #333;
+}
+
+.g-header .logo {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem;
+}
+.g-header .logo img{
+    width: 2rem;
+}
+
+.g-header .nav li{
+    margin: 0 .5rem;
+}
+
 /* sidebar */
 .g-sidebar {
     position: relative;
@@ -222,16 +243,16 @@ a:hover {
     padding-bottom: 2rem;
 }
 
-.g-sidebar .links {
+.g-sidebar .nav .links {
     margin-bottom: 2rem;
 }
 
-.g-sidebar .links .name span {
+.g-sidebar .nav .name span {
     border-bottom: 2px solid #fff;
     font-size: 1.2rem;
 }
 
-.g-sidebar .list {
+.g-sidebar .nav .list {
     margin-left: 6px;
 }
 
@@ -244,8 +265,8 @@ a:hover {
 /* main */
 .g-main {
     margin-left: 340px;
-    padding: 2rem 60px;
-    width: 620px;
+    padding: 2rem 3rem;
+    max-width: 620px;
     overflow: hidden;
 }
 
@@ -321,7 +342,6 @@ a:hover {
     color: #c00;
 }
 
-
 .g-article .title {
     font-size: 1.6rem;
     font-weight: normal;
@@ -348,9 +368,6 @@ a:hover {
     margin: 1rem 0;
 }
 
-.g-about .links {
-}
-
 .g-about .links .item,
 .g-about .links .item:visited,
 .g-about .links .item:active {
@@ -365,3 +382,17 @@ a:hover {
     font-weight: bold;
 }
 
+@media screen and (max-width: 650px) {
+    .g-sidebar {
+        display: none;
+    }
+
+    .g-header {
+        display: block;
+    }
+
+    .g-main {
+        margin: 0;
+        padding: 0 1.5rem;
+    }
+}

@@ -1,0 +1,8 @@
+<header class="g-header">
+    <div class="logo f-dib"><img src="{{site.user_img}}"></div>
+    <ul class="nav f-dib">
+        {% for link in site.menusLinks %}
+        <li class="f-dib"><a class="dark f-links-y" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a></li>
+        {% endfor %}
+    </ul>
+</header>
