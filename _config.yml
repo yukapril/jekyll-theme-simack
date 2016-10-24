@@ -31,7 +31,11 @@ title: 我的博客
 # 兴趣爱好描述: 在左侧顶栏标题下显示, 同时作为页面meta标签内使用(SEO)
 bio: 这是一个基于jekyll的博客
 
-# 关键词 仅作用于页面meta标签使用(SEO)
+# 展示头像图片地址
+user_img: 
+
+# 站点描述和关键词 仅作用于页面meta标签使用(SEO)
+description: 
 keywords: jekyll,simack,博客
 
 
