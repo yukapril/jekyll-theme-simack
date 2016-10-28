@@ -75,3 +75,5 @@ duoshuo:
 # 直接写入js链接即可
 page_analysis:
   common:
+# 备案信息
+miibeian: 
