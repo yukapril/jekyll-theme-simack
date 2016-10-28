@@ -49,6 +49,20 @@ commons.codeBeauty = function () {
 };
 
 
+/**
+ * 将文章外链加入href="_blank"
+ */
+commons.linkHref = function () {
+    var root = document.querySelector('#J_Main');
+    root.querySelectorAll('a').forEach(function (el) {
+        if (el.href.indexOf(location.protocol + '//' + location.host) !== 0) {
+            el.target = '_blank';
+        }
+    });
+};
+
+
 window.ready(function () {
     commons.codeBeauty();
+    commons.linkHref();
 });
