@@ -4,9 +4,9 @@
     padding: 0;
 }
 
-body, textarea, select, input {
+html, body, textarea, select, input {
     font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
 }
 
@@ -195,11 +195,12 @@ a:hover {
     height: 2rem;
     margin-right: 2rem;
 }
-.g-header .logo img{
+
+.g-header .logo img {
     width: 2rem;
 }
 
-.g-header .nav li{
+.g-header .nav li {
     margin: 0 .5rem;
 }
 
@@ -292,6 +293,10 @@ a:hover {
     font-weight: normal;
 }
 
+.g-posts .post-title a:visited {
+    color: #999;
+}
+
 .g-posts .post-source {
     font-size: 0.8rem;
     font-weight: normal;
@@ -332,6 +337,10 @@ a:hover {
 }
 
 /* article */
+.g-article {
+    line-height: 2;
+}
+
 .g-article a,
 .g-article a:visited,
 .g-article a:active {
@@ -343,7 +352,7 @@ a:hover {
 }
 
 .g-article .title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: normal;
     line-height: 3.6rem;
 }
@@ -383,6 +392,10 @@ a:hover {
 }
 
 @media screen and (max-width: 650px) {
+    html, body, textarea, select, input {
+        font-size: 16px;
+    }
+
     .g-sidebar {
         display: none;
     }
