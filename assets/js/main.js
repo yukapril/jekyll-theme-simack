@@ -24,8 +24,8 @@ var commons = {};
  */
 commons.codeBeauty = function () {
     var style = document.createElement('style');
-    var str = '.markdown-body code .lineno::after{content:attr(data-value);display:inline-block;margin-right:1rem;padding-right:.5rem;width:2rem;text-align:right;border-right:2px solid #999;}';
-    str += '.markdown-body pre .fast-op{margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #999;}';
+    var str = '.markdown-body code .lineno::after{content:attr(data-value);display:inline-block;margin-right:.5rem;padding-right:.5rem;width:1.5rem;text-align:right;border-right:2px solid #999;}';
+    str += '.markdown-body pre .code-lines:hover{background:#666;width:100%}';
     style.type = 'text/css';
     if (style.styleSheet) {
         style.styleSheet.cssText = str;
@@ -42,7 +42,7 @@ commons.codeBeauty = function () {
         data.pop();
         var newHtml = '';
         for (var j = 0, len2 = data.length; j < len2; j++) {
-            newHtml += '<span class="lineno" data-value="' + (j + 1) + '"></span>' + data[j] + '\n';
+            newHtml += '<div class="code-lines"><span class="lineno" data-value="' + (j + 1) + '"></span>' + data[j] + '\n</div>';
         }
         codeList[i].innerHTML = newHtml;
     }
