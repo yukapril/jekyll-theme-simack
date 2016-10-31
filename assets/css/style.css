@@ -267,7 +267,7 @@ a:hover {
 .g-main {
     margin-left: 340px;
     padding: 2rem 3rem;
-    max-width: 620px;
+    max-width: 660px;
     overflow: hidden;
 }
 
@@ -344,7 +344,7 @@ a:hover {
 .g-article a,
 .g-article a:visited,
 .g-article a:active {
-    color: #c00;
+    color: #c00!important;
 }
 
 .g-article a:hover {
