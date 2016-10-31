@@ -23,6 +23,8 @@ paginate: 10
 # 分页形式
 paginate_path: "page:num"
 
+# 链接形式
+permalink: /:year/:month/:day/:title.html
 
 # ====site info 站点信息====
 # 标题: 在左侧顶栏显示, 以及底部版权位置显示
