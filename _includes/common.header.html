@@ -1,0 +1,29 @@
+<header class="g-header">
+    <div class="links">
+        <ul class="list f-w960">
+            {% for link in site.menusLinks %}
+            <li><a class="f-links-x" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a></li>
+            {% endfor %}
+            <li class="cat">
+                <p id="J_Header_Cat">分类</p>
+                <ul class="cat-list">
+                    {% for cat in site.categoryLinks %}
+                    <li><a class="" href="{{site.baseurl}}{{cat.url}}">{{cat.title}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="g-banner">
+        <div class="wrapper">
+            <h1>@yukaPriL</h1>
+            <h2>
+            <pre><span style="color:#9f00a7">var</span><span>&nbsp;say&nbsp;=&nbsp;</span><span
+                    style="color:#9f00a7">function</span><span>()&nbsp;{</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#9f00a7">return</span><span>&nbsp;</span><span
+                        style="color:#c00">"hello&nbsp;world!"</span><span>;</span>
+<span>};</span></pre>
+            </h2>
+        </div>
+    </div>
+</header>

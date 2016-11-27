@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include common.head.html %}
 <body>
-{% include header.html %}
-<div class="g-body">
-    {% include sidebar.html %}
-    <div class="g-main" id="J_Main">
-        {{content}}
-    </div>
+{% include common.header.html %}
+<div class="g-main" id="J_Main">
+    {{content}}
 </div>
-{% include scripts.html %}
+{% include common.footer.html %}
+{% include common.scripts.html %}
 </body>
 </html> 
 

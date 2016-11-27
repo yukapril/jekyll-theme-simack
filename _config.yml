@@ -12,13 +12,17 @@ timezone: Asia/Shanghai
 # 代码高亮模式
 highlighter: rouge
 
+# markdown语法
+markdown: kramdown
+
+
 # 根目录设置
 # 如果是根目录, 不要填写'/', 直接留空就行
 # 如果是非根目录访问, 如http://abc.com/blog, 此处填写'/blog'
 baseurl:
 
 # 分页设置
-paginate: 10
+paginate: 5
 
 # 分页形式
 paginate_path: "page:num"
@@ -26,25 +30,23 @@ paginate_path: "page:num"
 # 链接形式
 permalink: /:year/:month/:day/:title.html
 
+
 # ====site info 站点信息====
+# 站点地址：仅用于生成sitemap使用，博客内容不受影响
+# 例：http://example.com
+website: 
+
 # 标题: 在左侧顶栏显示, 以及底部版权位置显示
 title: 我的博客
 
-# 兴趣爱好描述: 在左侧顶栏标题下显示, 同时作为页面meta标签内使用(SEO)
-bio: 这是一个基于jekyll的博客
-
-# 展示头像图片地址
-user_img: 
-
 # 站点描述和关键词 仅作用于页面meta标签使用(SEO)
-description: 
+description: 一个jekyll爱好者的博客
 keywords: jekyll,simack,博客
 
 
-
-# ====sidebar links 侧边栏链接====
 # 站内导航
 # 需要使用'/'开头
+# md文章，会被转码为html文章，所以扩展名也为html
 menusLinks:
   - title: 首页
     url: /
@@ -59,23 +61,26 @@ categoryLinks:
   - title: 学习
     url: /categories/study.html
 
+
 # 友情链接(此链接在新窗口打开)
 friendLinks:
   - title: simack
     url: https://github.com/yukapril/jekyll-theme-simack
 
 
-# 多说配置
+# 评论配置
+# 可以使用多说，或者discuz等。使用多说，配置即可，使用其他，请自行在`_includes/user.comments.html`中修改
+# 多说社会化评论
 # status 是否开启多说，true开启，false关闭
 # name 你在多说分配的short_name
 duoshuo:
-  status: false
-  name:
+  status: true
+  name: yukapril
+
+# 统计分析
+# 为了了兼容各平台，尤其是百度、CNZZ等高级统计分析（事件触发分析）
+# 请自行在`_includes/user.analysis.html`中修改
 
 
-# 访问统计
-# 直接写入js链接即可
-page_analysis:
-  common:
 # 备案信息
 miibeian: 

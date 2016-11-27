@@ -1,3 +1,5 @@
+# jekyll-theme-simack
+
 效果参考这里:[http://yukapril.com/categories/simack.html](http://yukapril.com/categories/simack.html)
 
 ## 安装流程

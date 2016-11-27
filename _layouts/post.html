@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include common.head.html %}
 <body>
-{% include header.html %}
-<div class="g-body">
-    {% include sidebar.html %}
-    <div class="g-main" id="J_Main">
-        <article class="g-article">
-            <h1 class="title f-tac">{{page.title}}</h1>
-            <h3 class="source f-tac">
-                <span class="iconfont icon-time"></span>
-                <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date: '%F' }}</time>
-                {% if page.categories.size > 0 %}
-                &nbsp;<span class="iconfont icon-fenlei"></span>
-                <div class="cat f-dib">
-                    {% for cat in page.categories %}
-                    <span>{{cat}}</span>
-                    {% endfor %}
-                </div>
-                {% endif%}
-                {% if page.tags.size > 0 %}
-                &nbsp;<span class="iconfont icon-tag"></span>
-                <div class="tags f-dib">
-                    {% for tag in page.tags %}
-                    <span>{{tag}}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </h3>
-            <div class="content markdown-body">{{page.content}}</div>
-        </article>
-        {% if page.nocomments != true %}
-        <div class="g-comments">
-            {% include comments.html %}
+{% include common.header.html %}
+<div class="g-main" id="J_Main">
+    <article class="g-article f-w960">
+        <h1 class="title f-tac">{{page.title}}</h1>
+        <h3 class="source f-tac">
+            <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date: '%F' }}</time>
+            {% if page.categories.size > 0 %}
+            &nbsp;
+            <div class="cat f-dib">
+                {% for cat in page.categories %}
+                <span>{{cat}}</span>
+                {% endfor %}
+            </div>
+            {% endif%}
+        </h3>
+        <div class="content markdown-body">{{page.content}}</div>
+        {% if page.tags.size > 0 %}
+        <div class="tags">
+            <span>#</span>
+            {% for tag in page.tags %}
+            <span>{{tag}}</span>
+            {% endfor %}
         </div>
         {% endif %}
+    </article>
+    {% if page.nocomments != true %}
+    <div class="g-comments f-w960">
+        {% include user.comments.html %}
     </div>
+    {% endif %}
 </div>
-{% include scripts.html %}
+{% include common.scripts.html %}
 </body>
-</html> 
+</html>
 
