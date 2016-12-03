@@ -36,7 +36,7 @@ permalink: /:year/:month/:day/:title.html
 # 例：http://example.com
 website: 
 
-# 标题: 在左侧顶栏显示, 以及底部版权位置显示
+# 标题: 在底部版权位置显示，以及页面meta标签（SEO）
 title: 我的博客
 
 # 站点描述和关键词 仅作用于页面meta标签使用(SEO)
