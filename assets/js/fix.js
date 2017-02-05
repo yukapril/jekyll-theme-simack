@@ -49,7 +49,6 @@ window.ready = function (callback) {
         }
     };
 
-
     /**
      * 将文章外链加入href="_blank"
      */
@@ -88,11 +87,32 @@ window.ready = function (callback) {
         }, false);
     };
 
+    /**
+     * 修复代码中大括号识别问题
+     */
+    commons.fixBrace = function () {
+        var list = document.querySelectorAll('code')
+        list.forEach(function(item){
+            if (item.innerHTML.indexOf('\\{\\{') >= 0) {
+                item.innerHTML = item.innerHTML.replace(/\\{\\{/g,'{{');
+            } 
+            if (item.innerHTML.indexOf('\\}\\}') >= 0) {
+                item.innerHTML = item.innerHTML.replace(/\\}\\}/g,'}}');
+            }
+            if (item.innerHTML.indexOf('\\{\\%') >= 0) {
+                item.innerHTML = item.innerHTML.replace(/\\{\\%/g,'{%');
+            }
+            if (item.innerHTML.indexOf('\\%\\}') >= 0) {
+                item.innerHTML = item.innerHTML.replace(/\\%\\}/g,'%}');
+            }
+        });
+    };
 
     window.ready(function () {
-        commons.codeBeauty();
+        //commons.codeBeauty();
         commons.linkHref();
         commons.headerCat();
+        commons.fixBrace();
     });
 
 })();

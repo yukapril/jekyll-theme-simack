@@ -8,6 +8,7 @@
     -webkit-text-size-adjust: 100%;
     color: #333;
     word-wrap: break-word;
+    word-break: break-all;
 }
 
 .markdown-body .pl-c {
